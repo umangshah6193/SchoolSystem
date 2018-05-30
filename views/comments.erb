@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Comments</title>
+    <link rel="stylesheet" href="/style.css">
+    <head>
+  <body>
+    <h1>Hello Student</h1>
+    <div id="nav">
+    <ul>
+      <li><a href="/" >Home</a>
+      <li>
+      <li><a href="/students">Student</a></li>
+      <li><a href="/comments">Comment</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/logout" align="right">Logout</a></li>
+      <li><a href="/comments/new">Add comment</a></li>
+    </ul>
+    <div>
+    </div>
+    <h3>List of Comments</h3>
+    <% @comment.to_a.each do |comment| -%>
+    <a href="/comments/<%= comment.cid %>/viewdetails"><%= comment.comment %></a>
+    <% end -%>
+  </body>
+</html>
