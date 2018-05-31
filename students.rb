@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require 'dm-core'
 require 'dm-migrations'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/abhijadav.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/netra.db")
 
 class Student
 	include DataMapper::Resource
